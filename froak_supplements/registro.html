@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/login.css">
+         
+
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>registro</title>
+    <script>
+        function confereSenha(){
+            const senha = document.querySelector('input(name=senha)');
+            const confirma = document.querySelector('input(name=confirma)');
+
+            if(confirma.value === senha.value){
+                confirma.setCustomValidity('');
+            }
+            else {
+                confirma.setCustomValidity('As senhas não conferem');
+            }
+        }
+
+        function senhaOK() {
+            alert("Senhas conferem")
+        }
+    </script>
+</head>
+<body>
+
+  <section>
+    <form name="cadastro"  onsubmit="senhaOK();" method="post" >
+        <h1>registre-se</h1>
+
+        <div class="inputbox">
+          <ion-icon name="person-circle-outline"></ion-icon>
+          <input type="test" required>
+          <label for="">Nome</label>
+      </div>
+
+        <div class="inputbox">
+            <ion-icon name="mail-outline"></ion-icon>
+            <input type="email" required>
+            <label for="">Email</label>
+        </div>
+
+        <div class="inputbox"  >
+            <ion-icon name="lock-closed-outline"></ion-icon>
+            <input type="password" name="senha" size="15" required onchange='confereSenha();'>
+            <label for="">Senha</label>
+        </div>
+
+        <div class="inputbox">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+            <input type="password" name="confirma" size="15" required onchange='confereSenha()';>
+            <label for="">Confirme sua senha</label>
+        </div>
+        
+        <button>registre-se</button>
+        <div class="register">
+            <p>Já possui uma conta?<a href="login.html"> faça Login</a></p>
+        </div>
+    </form>
+</section>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+  <script src="/js/script.js"></script>
+</body>
+</html>

@@ -13,7 +13,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-image: url(/img/backgroud_image_login.png) ;
+  background-image: url(/img/fundo_login.png) ;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -23,7 +23,7 @@ section {
     position: relative;
     max-width: 400px;
     background-color: transparent;
-    border: 2px solid rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 0, 0, 0.5);
     border-radius: 20px;
     backdrop-filter: blur(55px);
     display: flex;
